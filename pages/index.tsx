@@ -15,15 +15,11 @@ export default function Home() {
       <>
         <Facebook_Hedder />
         <div className="min-h-screen max-w-screen   flex justify-between caret-transparent">
-          <div>
-            <Facebook_Left_Side />
-          </div>
-          <div>
-            <Facebook_Middle_Side />
-          </div>
-          <div>
-            <Facebook_Right_Side />
-          </div>
+          <Facebook_Left_Side />
+
+          <Facebook_Middle_Side />
+
+          <Facebook_Right_Side />
         </div>
       </>
     </>
