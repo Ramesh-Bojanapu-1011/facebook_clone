@@ -13,13 +13,18 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(() => {
+  // Start with a stable default so server and initial client render match.
+  // Read actual value from sessionStorage on mount and update state.
+  const [theme, setThemeState] = useState<Theme>("light");
+
+  React.useEffect(() => {
     if (typeof window !== "undefined") {
       const stored = sessionStorage.getItem("theme");
-      if (stored === "dark" || stored === "light") return stored as Theme;
+      if (stored === "dark" || stored === "light") {
+        setThemeState(stored as Theme);
+      }
     }
-    return "light";
-  });
+  }, []);
 
   React.useEffect(() => {
     document.documentElement.classList.remove("light", "dark");
