@@ -1,4 +1,4 @@
-import Facebook_Clone from "@/components/Facebook_Clone";
+import Facebook_Hedder from "@/components/Facebook_Hedder";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,7 +10,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <>
-        <Facebook_Clone />
+        <Facebook_Hedder />
+        <div className="min-h-screen max-w-screen   flex flex-col items-center justify-center">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </>
     </>
   );
