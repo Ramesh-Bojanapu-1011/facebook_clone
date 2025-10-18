@@ -1,4 +1,7 @@
 import Facebook_Hedder from "@/components/Facebook_Hedder";
+import Facebook_Left_Side from "@/components/Facebook_Left_Side";
+import Facebook_Middle_Side from "@/components/Facebook_Middle_Side";
+import Facebook_Right_Side from "@/components/Facebook_Right_Side";
 import Head from "next/head";
 
 export default function Home() {
@@ -11,10 +14,16 @@ export default function Home() {
       </Head>
       <>
         <Facebook_Hedder />
-        <div className="min-h-screen max-w-screen   flex flex-col items-center justify-center">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="min-h-screen max-w-screen   flex justify-between caret-transparent">
+          <div>
+            <Facebook_Left_Side />
+          </div>
+          <div>
+            <Facebook_Middle_Side />
+          </div>
+          <div>
+            <Facebook_Right_Side />
+          </div>
         </div>
       </>
     </>
