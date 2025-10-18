@@ -1,9 +1,7 @@
 import React from "react";
 import { ModeToggle } from "./theme/ModeToggle";
 
-type Props = {};
-
-const Facebook_Clone = (props: Props) => {
+const Facebook_Clone = () => {
   return (
     <div className="bg-amber-50 dark:bg-amber-950">
       Facebook_Clone <ModeToggle />
